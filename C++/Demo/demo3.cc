@@ -44,6 +44,6 @@ int main(void)
     std::cin  >> name;
     
     checkname(namegot(name));
-    
+        
     return 0;
 }
