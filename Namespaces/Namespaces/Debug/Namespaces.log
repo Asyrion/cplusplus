@@ -1,0 +1,4 @@
+﻿  Namespaces.cpp
+h:\repositorys\cplusplus\namespaces\namespaces\namespaces.cpp(6): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Namespaces.vcxproj -> H:\Repositorys\cplusplus\Namespaces\Debug\Namespaces.exe
+  Namespaces.vcxproj -> H:\Repositorys\cplusplus\Namespaces\Debug\Namespaces.pdb (Full PDB)
