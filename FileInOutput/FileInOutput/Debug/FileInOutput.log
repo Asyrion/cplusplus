@@ -1,0 +1,26 @@
+﻿  FileInOutput.cpp
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(16): error C2065: 'string': undeclared identifier
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(16): error C2146: syntax error: missing ';' before identifier 'action'
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(16): error C2065: 'action': undeclared identifier
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(17): error C2065: 'string': undeclared identifier
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(17): error C2146: syntax error: missing ';' before identifier 'filename'
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(17): error C2065: 'filename': undeclared identifier
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(19): error C2653: 'stp': is not a class or namespace name
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(19): error C2065: 'cout': undeclared identifier
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(20): error C2653: 'stp': is not a class or namespace name
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(20): error C2065: 'cout': undeclared identifier
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(21): error C2653: 'stp': is not a class or namespace name
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(21): error C2065: 'cin': undeclared identifier
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(21): error C2065: 'action': undeclared identifier
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(23): error C2065: 'action': undeclared identifier
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(25): error C2653: 'stp': is not a class or namespace name
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(25): error C2065: 'cout': undeclared identifier
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(26): error C2653: 'stp': is not a class or namespace name
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(26): error C2065: 'cin': undeclared identifier
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(26): error C2065: 'filename': undeclared identifier
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(28): error C2065: 'action': undeclared identifier
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(30): error C2653: 'stp': is not a class or namespace name
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(30): error C2065: 'cout': undeclared identifier
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(31): error C2653: 'stp': is not a class or namespace name
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(31): error C2065: 'cin': undeclared identifier
+h:\repositorys\cplusplus\fileinoutput\fileinoutput\fileinoutput.cpp(31): error C2065: 'filename': undeclared identifier
