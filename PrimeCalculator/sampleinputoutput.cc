@@ -27,20 +27,22 @@ int TestPrime(int prime)
     }
     else
     {
-        // cout << "The given number is not a prime...sorry!\r\n";
-        cout << "&#x130ad;&#x131bd;&#x13368;&#x13387;&#x133fa;\n";
+        cout << "The given number is not a prime...sorry!\r\n";
     }
 }
 
 int main(void) 
 {
+    // Our integer to test
     int prime;
     
     cout << "Let's play a game!\n";
     cout << "Type in a number and i will test if it's a prime:\n";
     cin >> prime;
     
+    // Test the given integer
     TestPrime(prime);
     
+    // Return sucess
     return 0;
 }
