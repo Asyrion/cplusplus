@@ -11,6 +11,43 @@ using namespace std;
 using std::cout;
 using std::cin;
 
+/*
+* Write - Function
+*
+* Used to make simple output in this file.
+*/
+int write(char text_1[1000] = "", int arg_1 = 0, bool arg_2 = false, char text_2[1000] = "")
+{
+	int loc_arg_1 = (arg_1 != 0 ? arg_1 : NULL);
+	bool loc_arg_2 = (arg_2 != false ? arg_2 : NULL);
+
+	if (loc_arg_1 != 0 && loc_arg_2 != false)
+	{
+		cout << "\t" << text_1 << loc_arg_1 << loc_arg_2 << text_2 << "\n";
+	}
+	else if (loc_arg_1 != 0)
+	{
+		cout << "\t" << text_1 << loc_arg_1 << text_2 << "\n";
+	}
+	else if (loc_arg_2 != false)
+	{
+		cout << "\t" << text_1 << loc_arg_2 << text_2 << "\n";
+	}
+	else
+	{
+		cout << "\t" << text_1 << text_2 << "\n";
+	}
+
+
+	return 0;
+}
+
+/*
+* Lost Fortune - Text Game
+*
+* The computer asks for sóme numbers and a name and then displays
+* a individual text basded of these numbers and the name.
+*/
 int LostFortune()
 {
 	int group;
@@ -19,12 +56,12 @@ int LostFortune()
 	char name[100];
 
 
-	cout << "\t ********* LOST FORTUNE ********\t\n";
-	cout << "\tPlease enter a number:    ";
+	write(" ********* LOST FORTUNE ********", 0, false, "");
+	write("Please enter a number:    ", 0, false, "");
 	cin >> group;
-	cout << "\t\n\tPlease enter a number smaller then the last one:    ";
+	write("\tPlease enter a number smaller then the last one:    ", 0, false, "");
 	cin >> days;
-	cout << "\t\n\t\n\tPlease enter your name:    ";
+	write("\t\n\tPlease enter your name:    ", 0, false, "");
 	cin >> name;
 
 	cout << "\t\n\t\n\t Once an epic tale took place when " << group << " brave hunters \n \t gathered together to hunt down the " << (days / 2) << " Riders of the \n \t apocalypse.\t\n";
@@ -33,20 +70,79 @@ int LostFortune()
 	return 0;
 }
 
-
+/*
+* RandomNumberGenerator - Function
+*
+* Generate a random number and display a dice equivalent.
+*/
 int RandomNumberGenerator()
 {
-	srand(static_cast<unsigned int>(time(0))); // seed random number generator
+	// srand(static_cast<unsigned int>(time(0))); // seed random number generator
 
 	int randomNumber = rand(); // generate random number
 
 	int dice = (randomNumber % 6) + 1;
 
-	cout << "You rolled: " << dice << "!";
+	write("You rolled: ", dice,false,"!");
+	
+	return 0;
 }
 
+/*
+* GuessMyNumber()  - Game
+* 
+* The computer asks you to choose a number between 1 and 100 
+* and tries to guess your number untill he finds it.
+*/
+int GuessMyNumber()
+{
+	int guess;
+	char answer;
+	bool success = false;
+
+	write(" ******* Welcome to Guess My Number! *******", 0, false, "");
+	write("Please choose a number between 1 and 100.",0,false,"");
+
+	guess = rand();
+	guess = (guess % 100) + 1;
+
+	write("Was your number ",guess ,false,"?   (y/n)");
+	cin >> answer;
+
+	if(answer == 'n')
+	{
+		while (success == false) 
+		{
+			guess = rand();
+			guess = (guess % 100) + 1;
+
+			write("Was your number ", guess, false, "?   (y/n)");
+			cin >> answer;
+			
+			if (answer == 'y')
+			{
+				success = true;
+			}
+		}
+	}
+
+	if (answer == 'y' && success == true || success == true) {
+		write("That was easy.", 0, false, "");
+	}
+
+	return 0;
+
+}
+
+/*
+* main function executes when code is compiled
+*
+* Displays a menu of different c++ classes that contain interaction.
+*/
 int main()
 {
+	int choice;
+
 	// Liste von Items
 	enum Itemtypes { Axes, Swords, Shields, Gloves };
 	Itemtypes woodenAxe = Axes;
@@ -54,12 +150,31 @@ int main()
 	// Beispiel einer weiteren Enumeration
 	//enum Itemattack {Axes = 20, Swords = 25, Shields = 0, Gloves = 10};
 
-	cout << "\t\n\t\n\t******** WELCOME TO THE C++ PLAYGROUND ********\n";
-	cout << "\t Here are some options to choose between: \n";
-	cout << "\t Press the according number to choose the option\n";
-	cout << "\t 1.Lost Fortune \n";
-	cout << "\t 2.Random Number Generator";
-	
+	write("\t\n\t******** WELCOME TO THE C++ PLAYGROUND ********", 0, false, "");
+	write(" Here are some options to choose between: ", 0, false, "");
+	write(" Press the according number to choose the option", 0, false, "");
+	write(" 1.Lost Fortune ", 0, false, "");
+	write(" 2.Random Number Generator", 0, false, "");
+	write(" 3.Guess My Number", 0, false, "");
+	write(" What is your choice?", 0, false, "\t\t");
+	cin >> choice;
+
+	switch(choice) 
+	{
+	case 1:
+		LostFortune();
+
+		break;
+	case 2:
+		RandomNumberGenerator();
+		
+		break;
+	case 3:
+		GuessMyNumber();
+
+		break;
+	}
+
 	return 0;
 
 }
