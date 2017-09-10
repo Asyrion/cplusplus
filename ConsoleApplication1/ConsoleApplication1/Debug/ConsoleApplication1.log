@@ -1,0 +1,7 @@
+﻿  ConsoleApplication1.cpp
+h:\repositorys\cplusplus\consoleapplication1\consoleapplication1\consoleapplication1.cpp(17): warning C4101: 'divisionten': unreferenced local variable
+h:\repositorys\cplusplus\consoleapplication1\consoleapplication1\consoleapplication1.cpp(17): warning C4101: 'divisionthirteen': unreferenced local variable
+h:\repositorys\cplusplus\consoleapplication1\consoleapplication1\consoleapplication1.cpp(17): warning C4101: 'divisiontwelve': unreferenced local variable
+h:\repositorys\cplusplus\consoleapplication1\consoleapplication1\consoleapplication1.cpp(17): warning C4101: 'divisioneleven': unreferenced local variable
+  ConsoleApplication1.vcxproj -> H:\Repositorys\cplusplus\ConsoleApplication1\Debug\ConsoleApplication1.exe
+  ConsoleApplication1.vcxproj -> H:\Repositorys\cplusplus\ConsoleApplication1\Debug\ConsoleApplication1.pdb (Full PDB)
