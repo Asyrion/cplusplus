@@ -11,10 +11,17 @@ using namespace std;
 using std::cout;
 using std::cin;
 
-/*
+/**
 * Write - Function
 *
 * Used to make simple output in this file.
+* 
+* @param char text_1[1000] Our first text to output.
+* @param int  arg_1        A number to display with the text.
+* @param bool arg_2        A boolean to display with the text.
+* @param char text_2[1000] Our second text, so text ist wrapping around our options.
+* 
+* @return 0 Return success code
 */
 int write(char text_1[1000] = "", int arg_1 = 0, bool arg_2 = false, char text_2[1000] = "")
 {
@@ -42,11 +49,51 @@ int write(char text_1[1000] = "", int arg_1 = 0, bool arg_2 = false, char text_2
 	return 0;
 }
 
-/*
+/**
+ * CalcRevenue - Function
+ * 
+ * Calculate the revenue based on the weekly sales for 
+ * three models of revenue.
+ * 
+ * @param int WeeklySales The amount of sales that were completed this week.
+ * 
+ * @return 0 Return success code.
+ */
+int CalcRevenue(int WeeklySales)
+{
+    int PerHour;
+    int Revenue;
+    
+    // Calculation method 1
+    {
+        cout << "\tYour revenue is $600.\n";
+    }
+    
+    // Calculation method 2
+    {
+        int PerHour = 7;
+        int Revenue = (PerHour * 40) + (((WeeklySales * 225) / 100) * 10);
+        
+        cout << "\tYour revenue is $" << Revenue << ".\n";
+    }
+    
+    // Calculation method 3
+    {
+        int Revenue = (WeeklySales * 20) + (((WeeklySales * 225) / 100) * 20);
+        
+        cout << "\tYour revenue is $600.\n";
+    }
+    
+    return 0;
+}
+
+/**
 * Lost Fortune - Text Game
 *
 * The computer asks for sóme numbers and a name and then displays
 * a individual text basded of these numbers and the name.
+* 
+* @return 0 Return success code.
 */
 int LostFortune()
 {
@@ -70,10 +117,12 @@ int LostFortune()
 	return 0;
 }
 
-/*
+/**
 * RandomNumberGenerator - Function
 *
 * Generate a random number and display a dice equivalent.
+* 
+* @return 0 Return success code.
 */
 int RandomNumberGenerator()
 {
@@ -88,11 +137,13 @@ int RandomNumberGenerator()
 	return 0;
 }
 
-/*
+/**
 * GuessMyNumber()  - Game
 * 
 * The computer asks you to choose a number between 1 and 100 
 * and tries to guess your number untill he finds it.
+* 
+* @return 0 Return success code.
 */
 int GuessMyNumber()
 {
@@ -134,7 +185,7 @@ int GuessMyNumber()
 
 }
 
-/*
+/**
 * main function executes when code is compiled
 *
 * Displays a menu of different c++ classes that contain interaction.
@@ -142,7 +193,7 @@ int GuessMyNumber()
 int main()
 {
 	int choice;
-
+        
 	// Liste von Items
 	enum Itemtypes { Axes, Swords, Shields, Gloves };
 	Itemtypes woodenAxe = Axes;
@@ -156,6 +207,7 @@ int main()
 	write(" 1.Lost Fortune ", 0, false, "");
 	write(" 2.Random Number Generator", 0, false, "");
 	write(" 3.Guess My Number", 0, false, "");
+	write(" 4.Calculate Revenue", 0, false, "");
 	write(" What is your choice?", 0, false, "\t\t");
 	cin >> choice;
 
@@ -171,6 +223,12 @@ int main()
 		break;
 	case 3:
 		GuessMyNumber();
+
+		break;
+	case 4:
+                int WeeklySales;
+		cin << WeeklySales;
+                CalcRevenue(WeeklySales);
 
 		break;
 	}
