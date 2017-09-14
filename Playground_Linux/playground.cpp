@@ -3,7 +3,6 @@
 #include <iostream>
 using namespace std;
 
-
 int CalcRevenue(int WeeklySales)
 {
     int Revenue;
