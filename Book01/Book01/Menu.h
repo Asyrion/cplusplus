@@ -34,7 +34,12 @@ public:
 			OuputTest();
 
 			break;
+		case 7:
+			VectorTest();
+
+			break;
 		}
+
 		return 0;
 	}
 
@@ -71,6 +76,31 @@ private:
 	static int OuputTest()
 	{
 		cout << "\t [DEBUG] - Test output.";
+		return 0;
+	}
+
+	static int VectorTest()
+	{
+		vector <string> Items;
+		Items.push_back("Axes");
+		MenuController::write("Axes added to inventory!", 0, false, "");
+
+		Items.push_back("Swords");
+		MenuController::write("Swords added to inventory!", 0, false, "");
+
+		Items.push_back("Shields");
+		MenuController::write("Shields added to inventory!", 0, false, "");
+
+		Items.push_back("Gloves");
+		MenuController::write("Gloves added to inventory!", 0, false, "");
+
+		Items.pop_back();
+		MenuController::write("Removed Gloves from inventory!", 0, false, "");
+
+		for (unsigned int i = 0; i < Items.size(); ++i) {
+			cout << Items[i];
+		}
+		
 		return 0;
 	}
 

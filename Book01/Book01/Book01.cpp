@@ -5,6 +5,9 @@
 #include "stdafx.h"
 #include <iostream>
 #include <string>
+
+#include <vector>
+
 // Using directive
 using namespace std;
 
@@ -13,6 +16,7 @@ using namespace std;
 // For saving memory
 using std::cout;
 using std::cin;
+
 
 /**
 * main function executes when code is compiled
@@ -29,7 +33,7 @@ int main()
 
 	// Beispiel einer weiteren Enumeration
 	//enum Itemattack {Axes = 20, Swords = 25, Shields = 0, Gloves = 10};
-
+ 
 	MenuController::write("\t\n\t******** WELCOME TO THE C++ PLAYGROUND ********", 0, false, "");
 	MenuController::write(" Here are some options to choose between: ", 0, false, "");
 	MenuController::write(" Press the according number to choose the option", 0, false, "");
@@ -39,7 +43,9 @@ int main()
 	MenuController::write(" 4.Calculate Revenue", 0, false, "");
 	MenuController::write(" 5.Hero Inventory", 0, false, "");
 	MenuController::write(" 6.Class Test", 0, false, "");
+	MenuController::write(" 7.Vector Test", 0, false, "");
 	MenuController::write(" What is your choice?", 0, false, "");cin >> choice;
+
 
 	MenuController::Menue(choice);
 	
