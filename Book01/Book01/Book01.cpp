@@ -2,12 +2,13 @@
 //
 #include <cstdlib>
 #include <ctime>
+#include <cctype>
 #include "stdafx.h"
 #include <iostream>
 #include <string>
 
 #include <vector>
-
+#include <algorithm>
 // Using directive
 using namespace std;
 
@@ -44,6 +45,10 @@ int main()
 	MenuController::write(" 5.Hero Inventory", 0, false, "");
 	MenuController::write(" 6.Class Test", 0, false, "");
 	MenuController::write(" 7.Vector Test", 0, false, "");
+	MenuController::write(" 8.Hangman", 0, false, "");
+	MenuController::write(" 9.Function Overloadig Showcase", 0, false, "");
+	MenuController::write(" 10.Reference Test", 0, false, "");
+	MenuController::write(" 11.Constant Vector Test (Unchangable)", 0, false, "");
 	MenuController::write(" What is your choice?", 0, false, "");cin >> choice;
 
 

@@ -1,11 +1,26 @@
 // The Header file for our Menu.cpp
+#include <ctime>
+#include <vector>
+#include <algorithm>
+
+int Triple(int number);
+string Triple(string text);
+
+int ReferenceTest(int& number);
+
+// Initiate function with constant vector string argument input
+void display (const vector <string>& inventory);
 
 // The Menu class used in Book01.cpp
 class MenuController
 {
 public:
+
+
 	static int Menue(int choice)
 	{
+		int normalInt = 10;
+		int& rnormalInt = normalInt;
 		switch (choice)
 		{
 		case 1:
@@ -37,6 +52,32 @@ public:
 		case 7:
 			VectorTest();
 
+			break;
+		case 8:
+			Hangman();
+
+			break;
+		case 9:
+			cout << "\t Using Triple() as a function for integers: "; cout << Triple(10);
+			cout << "\n\t\n\t\n \t And for strings: "; cout << Triple("string");
+			
+			break;
+		case 10:
+			cout << "\t Nachdem die Funktion ausgeführt wurde: \n \t"; 
+			ReferenceTest(rnormalInt);
+			cout << "\t " << normalInt << "\n";
+			cout << "\n \t Und mit der Funktion ohne Referenzzeiger (Pointer): \n \t";
+			ReferenceTest1(normalInt);
+			cout << "\n \t " << normalInt << "\n";
+			break;
+		case 11:
+			vector <string> inventory;
+			inventory.push_back("Sword");
+			inventory.push_back("Shield");
+			inventory.push_back("Axe");
+
+			display(inventory);
+			
 			break;
 		}
 
@@ -76,6 +117,119 @@ private:
 	static int OuputTest()
 	{
 		cout << "\t [DEBUG] - Test output.";
+		return 0;
+	}
+
+	static int Triple(int number)
+	{
+
+		return number + number + number;
+
+	}
+
+	static int ReferenceTest(int& number)
+	{
+		cout << "\t Innerhalb der Funktion: " << number << "\n";
+
+		number += 15;
+
+		return number;
+	}
+
+	static int ReferenceTest1(int number)
+	{
+		cout << "\t Innerhalb der Funktion: " << number << "\n";
+
+		number += 15;
+
+		return number;
+	}
+
+	static string Triple(string text)
+	{
+		return text + text + text;
+
+	}
+
+	static void display(const vector <string>& vec)
+	{
+		for (vector <string>::const_iterator iter = vec.begin(); iter != vec.end();++iter) 
+		{
+			cout << "\t" << *iter << "\n";
+		}
+	}
+
+	static int Hangman()
+	{
+		// Our letter to guess
+		char guess;
+
+		// Max wrong tries till game ends
+		const int MAX_WRONG = 10;
+
+		// Vector (like an array)
+		vector <string> words;
+		words.push_back("TEST");
+		words.push_back("ROMAN");
+		words.push_back("LANGESWORT");
+
+		srand(static_cast<unsigned int> (time(0)));
+		random_shuffle(words.begin(), words.end());
+
+		const string THE_WORD = words[0];
+
+		int wrong = 0;
+
+		string soFar(THE_WORD.size(), '-');
+		string used = "";
+
+		cout << "\t********* WELCOME TO HANGMAN, GOOD LUCK *********\n";
+
+		while ((wrong < MAX_WRONG) && (soFar != THE_WORD)) 
+		{
+			cout << "\t You have " << (MAX_WRONG - wrong) << "incorrect guesses left.\n";
+			cout << "\t You have used the following letters: " << used << "\n";
+			cout << "\t So far the word is: " << soFar << "\n";
+
+			cout << "\t\n\n\n \t Enter your guess: "; cin >> guess;
+			guess = toupper(guess);
+
+			while (used.find(guess) != string::npos)
+			{
+				cout << "\t\n \t You have already guessed " << guess << "\n";
+				cout << "\t\n \t Enter your guess: "; cin >> guess;
+				guess = toupper(guess);
+			}
+			used += guess;
+
+			if(THE_WORD.find(guess) != string::npos) 
+			{
+				cout << "\t\n\t That is right!\n";
+
+				for (int i=0; i < THE_WORD.length(); ++i)
+				{
+					if(THE_WORD[i] == guess) 
+					{
+						soFar[i] = guess;
+					}
+				}
+			}
+			else
+			{
+				cout << "\t\n \t Sorry " << guess << " is not in the word!\n";
+				++wrong;
+			}
+		}
+		
+		if (wrong == MAX_WRONG) 
+		{
+			cout << "\t\n \t You have been hanged!";
+		}
+		else 
+		{
+			cout << "\t You guessed: " << guess << "\n";
+		}
+		
 		return 0;
 	}
 

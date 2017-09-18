@@ -1,5 +1,6 @@
 ﻿  Book01.cpp
-h:\repositorys\cplusplus\book01\book01\menu.h(110): warning C4101: 'Revenue': unreferenced local variable
-h:\repositorys\cplusplus\book01\book01\menu.h(109): warning C4101: 'PerHour': unreferenced local variable
+h:\repositorys\cplusplus\book01\book01\menu.h(209): warning C4018: '<': signed/unsigned mismatch
+h:\repositorys\cplusplus\book01\book01\menu.h(264): warning C4101: 'Revenue': unreferenced local variable
+h:\repositorys\cplusplus\book01\book01\menu.h(263): warning C4101: 'PerHour': unreferenced local variable
   Book01.vcxproj -> H:\Repositorys\cplusplus\Book01\Debug\Book01.exe
   Book01.vcxproj -> H:\Repositorys\cplusplus\Book01\Debug\Book01.pdb (Full PDB)
