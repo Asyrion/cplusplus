@@ -48,7 +48,10 @@ int main()
 	MenuController::write(" 8.Hangman", 0, false, "");
 	MenuController::write(" 9.Function Overloadig Showcase", 0, false, "");
 	MenuController::write(" 10.Reference Test", 0, false, "");
-	MenuController::write(" 11.Constant Vector Test (Unchangable)", 0, false, "");
+	MenuController::write(" 11.Pointer Test", 0, false, "");
+	MenuController::write(" 12.Constant Vector Test (Unchangable)", 0, false, "");
+	
+
 	MenuController::write(" What is your choice?", 0, false, "");cin >> choice;
 
 

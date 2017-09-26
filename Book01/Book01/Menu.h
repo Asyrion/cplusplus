@@ -21,6 +21,7 @@ public:
 	{
 		int normalInt = 10;
 		int& rnormalInt = normalInt;
+		
 		switch (choice)
 		{
 		case 1:
@@ -71,6 +72,10 @@ public:
 			cout << "\n \t " << normalInt << "\n";
 			break;
 		case 11:
+			PointerTest();
+
+			break;
+		case 12:
 			vector <string> inventory;
 			inventory.push_back("Sword");
 			inventory.push_back("Shield");
@@ -79,6 +84,7 @@ public:
 			display(inventory);
 			
 			break;
+		
 		}
 
 		return 0;
@@ -113,6 +119,36 @@ public:
 
 
 private:
+	static int PointerTest()
+	{
+		const int NewScore = 5000;
+		int score = 1000;
+		int* pscore = &score;
+		const int* newScore = &NewScore;
+
+		cout << "\t ********** WELCOME TO THE POINTER TEST *********\n";
+		cout << "\t\n\t\n \t A pointer is a variable that holds the memory adress.\n";
+		cout << "\t\n\t The value of a variable can be changed through the pointer.\n";
+		cout << "\t\n \t The pointer itself is also changeable.\n";
+		cout << "\t\n \t But a constant pointer is fixed on the memory position.\n";
+		cout << "\t\n \t CAUTION: It is not fixed on the value of that memory address.\n";
+		
+		cout << "\t\n\t\n \t Memory adress of int score: " << &score << " \n";
+		cout << "\t\n\t\n \t Memory adress of int* pscore: " << pscore << " \n";
+
+		
+		cout << "\t\n\t\n \t The value can be changed (*pscore += 500): " << (*pscore += 500) << " \n";
+
+		cout << "\t\n\t\n \t Value of int score: " << score << " \n";
+		cout << "\t\n\t\n \t Value of int* pscore: " << *pscore << " \n";
+
+		cout << "\t\n\t\n \t Constant Pointer const int* newScore: " << *newScore << " \n";
+		
+
+		cout << "\t\n\t\n \t This pointer can not be changed: newScore = score: Would result in an compiler error! \n";
+
+		return 0;
+	}
 
 	static int OuputTest()
 	{
