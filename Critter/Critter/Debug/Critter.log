@@ -1,0 +1,4 @@
+﻿  Critter.cpp
+h:\repositorys\cplusplus\critter\critter\critter.cpp(111): warning C4715: 'Critter::GetMood': not all control paths return a value
+  Critter.vcxproj -> H:\Repositorys\cplusplus\Critter\Debug\Critter.exe
+  Critter.vcxproj -> H:\Repositorys\cplusplus\Critter\Debug\Critter.pdb (Full PDB)
