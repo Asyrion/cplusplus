@@ -6,7 +6,7 @@ using namespace std;
 const string animals[] = {"Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig"};
 const string elements[] ={"Wood", "Fire", "Earth", "Metal", "Water"};
 
-string getElement(int year) 
+string getElement(int year)
 {
     int element = floor((year-4)%10/2);
     return elements[element];
@@ -26,13 +26,14 @@ string getYY(int year)
     }
 }
 
-int main() 
+int main()
 {
     std::cout << "\t\n\t\n\t******** CHINESE ZODIAC CALCULATOR ********\t\n\t\n\t\n";
     int years[] = {1935, 1938, 1968, 1972, 1976, 1996, 2017};
-    
-    for(int i=0; i<6;i++) {
-        std::cout << "\t" << years[i] << " is the year of the " << getElement(years[i]) << " " << getAnimal(years[i]) << " (" << getYY(years[i]) << ")." << std::endl;
+
+    // ranged based for-loop
+    for(auto currentYear: years) {
+        std::cout << "\t" << currentYear << " is the year of the " << getElement(currentYear) << " " << getAnimal(currentYear) << " (" << getYY(currentYear) << ")." << std::endl;
     }
     std::cout << "\t\n\t\n";
 }
