@@ -31,6 +31,7 @@ int main()
     std::cout << "\t\n\t\n\t******** CHINESE ZODIAC CALCULATOR ********\t\n\t\n\t\n";
     int years[] = {1935, 1938, 1968, 1972, 1976, 1996, 2017};
 
+    // ranged based for-loop
     for(auto currentYear: years) {
         std::cout << "\t" << currentYear << " is the year of the " << getElement(currentYear) << " " << getAnimal(currentYear) << " (" << getYY(currentYear) << ")." << std::endl;
     }
